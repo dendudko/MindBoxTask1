@@ -26,3 +26,6 @@ class TestCalculateArea(unittest.TestCase):
         shapes = [CalculateArea.Circle(math.pi ** 2), CalculateArea.Triangle(3, 4, 5)]
         self.assertEqual(shapes[0].area(), math.pi ** 5)
         self.assertEqual(shapes[1].area(), 6)
+
+    def test_is_right_triangle_floating_point(self):
+        self.assertTrue(CalculateArea.Triangle(math.sqrt(2), math.sqrt(7), 3).is_right_triangle())

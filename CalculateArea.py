@@ -34,7 +34,7 @@ class Triangle(Shape):
     def is_right_triangle(self):
         sides = [self.side1, self.side2, self.side3]
         sides.sort()
-        return sides[0] ** 2 + sides[1] ** 2 == sides[2] ** 2
+        return math.isclose(sides[0] ** 2 + sides[1] ** 2, sides[2] ** 2)
 
     # def area(self):
     #     right_area = self.try_as_right_triangle()
@@ -46,5 +46,5 @@ class Triangle(Shape):
     # def try_as_right_triangle(self):
     #     sides = [self.side1, self.side2, self.side3]
     #     sides.sort()
-    #     if sides[0] ** 2 + sides[1] ** 2 == sides[2] ** 2:
+    #     if math.isclose(sides[0] ** 2 + sides[1] ** 2, sides[2] ** 2):
     #         return sides[0] * sides[1] / 2
